@@ -1,0 +1,27 @@
+curl -X GET http://192.168.0.117:8080/api/v1/epayment/auth/token/refresh -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVTkdVS0FCIiwiaXNzIjoiaHR0cDovLzE5Mi4xNjguMC4xMTc6ODU3MC9hcGkvdjEvZXBheW1lbnQvYXV0aC9sb2dpbiIsImV4cCI6MTcxMTg3NjAxNX0.BTGaXqULRxwZu0Mp_WJlz5oanrjontgquKIhxxLftuU" -H "accept: application/json"
+
+
+curl -X POST -H "Content-Type: application/json" -H "Accept: application/json" -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVTkdVS0FCIiwicm9sZXMiOlsiUlJBX0VQQVlfQVBJX1VTRVIiXSwiaXNzIjoiaHR0cDovLzE5Mi4xNjguMC4xMTc6ODU3MC9hcGkvdjEvZXBheW1lbnQvYXV0aC90b2tlbi9yZWZyZXNoIiwiZXBheW1lbnRfYmFua19pZCI6MjA0LCJlcGF5bWVudF91c2VyX2lkIjo5OCwiZXhwIjoxNzEwMzM3MjMzfQ.iOvjUi2WoReb_Klsj_wunNFh6Qt1YdF4jsOTDMPLtoA" -d  '[{"RequestId": "105","Tin": "103134658","Names": "SHYIRAMBERE SILAS","Account": "5542-AB-212445BE","Currency": "1","Phone": "0788826551","Nid": "1197180030315052"}]' http://192.168.0.117:8080/api/v1/epayment/registration/register
+
+
+curl -X POST http://192.168.0.117:8080/api/v1/epayment/cashier/payment/getPay -H "Content-Type: application/json" -H "Accept: application/json" -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVTkdVS0FCIiwicm9sZXMiOlsiUlJBX0VQQVlfQVBJX1VTRVIiXSwiaXNzIjoiaHR0cDovLzE5Mi4xNjguMC4xMTc6ODU3MC9hcGkvdjEvZXBheW1lbnQvYXV0aC90b2tlbi9yZWZyZXNoIiwiZXBheW1lbnRfYmFua19pZCI6MjA0LCJlcGF5bWVudF91c2VyX2lkIjo5OCwiZXhwIjoxNzA5MTI2NDM1fQ.kewGBG8Xg8atIYQ1FRJIFEfxqcwjESUtclESP9IHyMg" -d '{"RRA_REF": "0564968242","TIN": "100050928","TAX_PAYER_NAME": "SANLAM RWANDA PLC ","PAY_DATE": "07/03/2023 16:39:10","AMOUNT_PAID": "250","BANK_REF": "QWWWA","RRA_BANK_ACCT_NO": "45100012","PAYMENT_TYPE_NO": "5","PAY_DOC_NO": "","TRANS_DATE": "07/03/2023 16:39:10","ASSESS_NO": "18616019",    "RRA_ORIGIN_NO": "3",   "DEC_ID": "171203868"}'
+
+
+curl -X POST http://192.168.0.117:8080/api/v1/epayment/registration/deregister -H "Content-Type: application/json" -H "Accept: application/json" -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVTkdVS0FCIiwicm9sZXMiOlsiUlJBX0VQQVlfQVBJX1VTRVIiXSwiaXNzIjoiaHR0cDovLzE5Mi4xNjguMC4xMTc6ODU3MC9hcGkvdjEvZXBheW1lbnQvYXV0aC90b2tlbi9yZWZyZXNoIiwiZXBheW1lbnRfYmFua19pZCI6MjA0LCJlcGF5bWVudF91c2VyX2lkIjo5OCwiZXhwIjoxNzA4NjY3MzQ5fQ.gsO9MjAAJV-WD8uMO39R0ZdQL0ORrRv3LfGlOs0dhew" -d '[  {    "RequestId": "7114",    "Tin": "100050928", "Account": "121212",    "RequestDate": "2023-03-17 10:31:24.187"}]'
+
+curl -X POST http://192.168.0.117:8080/api/v1/epayment/cashier/payment/getPay -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVTkdVS0FCIiwicm9sZXMiOlsiUlJBX0VQQVlfQVBJX1VTRVIiXSwiaXNzIjoiaHR0cDovLzE5Mi4xNjguMC4xMTc6ODU3MC9hcGkvdjEvZXBheW1lbnQvYXV0aC90b2tlbi9yZWZyZXNoIiwiZXBheW1lbnRfYmFua19pZCI6MjA0LCJlcGF5bWVudF91c2VyX2lkIjo5OCwiZXhwIjoxNzA5MDI0OTgwfQ.A_Eq9PL-B492yO2qOVhUmOA2WfllG_pf2xB_PG-cbmY" -d '{"RRA_REF": "0564968242","TIN": "100050928","TAX_PAYER_NAME": "SANLAM RWANDA PLC ","PAY_DATE": "07/03/2023 16:39:10","AMOUNT_PAID": "250","BANK_REF": "QWWWA","RRA_BANK_ACCT_NO": "45100012","PAYMENT_TYPE_NO": "5","PAY_DOC_NO": "","TRANS_DATE": "07/03/2023 16:39:10","ASSESS_NO": "18616019","RRA_ORIGIN_NO": "3","DEC_ID": "171203868"}'
+
+curl -X GET http://192.168.0.117:8080/api/v1/epayment/cashier/payment/getDoc?DocID=0011066441 -H "Content-Type: application/json" -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVTkdVS0FCIiwicm9sZXMiOlsiUlJBX0VQQVlfQVBJX1VTRVIiXSwiaXNzIjoiaHR0cDovLzE5Mi4xNjguMC4xMTc6ODU3MC9hcGkvdjEvZXBheW1lbnQvYXV0aC90b2tlbi9yZWZyZXNoIiwiZXBheW1lbnRfYmFua19pZCI6MjA0LCJlcGF5bWVudF91c2VyX2lkIjo5OCwiZXhwIjoxNzA5MjgwNjU1fQ.VWYXzNpIN78KdtzncbsSXHeMqpU8DLAnW2M_VO9dIMA" 
+
+curl -X POST -H "Content-Type: application/json" -H "Accept: application/json" -H "username: UNGUKAB" -H "password: Unguka@test1" http://192.168.0.117:8080/api/v1/epayment/auth/login
+
+{"MessageCode":1,"MessageDescription":"SUCCESS","ResponseObject":
+
+{
+ "AccessToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVTkdVS0FCIiwicm9sZXMiOlsiUlJBX0VQQVlfQVBJX1VTRVIiXSwiaXNzIjoiaHR0cDovLzE5Mi4xNjguMC4xMTc6ODU3MC9hcGkvdjEvZXBheW1lbnQvYXV0aC90b2tlbi9yZWZyZXNoIiwiZXBheW1lbnRfYmFua19pZCI6MjA0LCJlcGF5bWVudF91c2VyX2lkIjo5OCwiZXhwIjoxNzEwMzM3MjMzfQ.iOvjUi2WoReb_Klsj_wunNFh6Qt1YdF4jsOTDMPLtoA",
+ 
+ 
+ "RefreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVTkdVS0FCIiwiaXNzIjoiaHR0cDovLzE5Mi4xNjguMC4xMTc6ODU3MC9hcGkvdjEvZXBheW1lbnQvYXV0aC9sb2dpbiIsImV4cCI6MTcxMTg3NjAxNX0.BTGaXqULRxwZu0Mp_WJlz5oanrjontgquKIhxxLftuU"
+
+
+}}

@@ -1,0 +1,78 @@
+yum -y install  authconfig ntsysv wget bind-utils nano cpan php-pear php-devel zlib zlib-devel net-tools bc libaio glibc httpd mysql-server php php-mysqli php-mcrypt php-gd php-mbstring freetype lynx telnet sysstat phpmyadmin gcc glibc glibc-common gd gd-devel php-devel php-pear freetype* libxml2* svn pcre* openssl*  system-config* ntsysv httpd mysql-server php php-pgsql php-mcrypt php-gd php-mbstring freetype lynx telnet sysstat phpmyadmin mod_ssl freetype* openssl* php-mbstring openssl* -y
+
+system-config-network-tui setuptool mysql-devel htttpd-devel php-mysql
+
+Kaneza!23
+
+http://10.22.99.100/dbadmin/index.php?route=/server/databases
+
+
+http://192.168.0.117:8085/rra.epay/api/authenticate
+
+
+Sample request
+
+      
+curl -X POST  http://10.99.100.221:3800/xapi/v1.1//accountLookUp -H "Content-Type: application/json" -d '{"referenceId": "231231321321", "accessCode": "UngukaBank", "narration": "Testing Act Lookup", "accountNumber": "10100781350019", "customerNumber": "" }'
+
+curl -X POST  http://10.99.100.38:3800/xapi/v1.1/accountLookUp  -H "Content-Type: application/json" -d '{"referenceId": "231231321321",  "accessCode": "UngukaBank",  "narration": "Testing Act Lookup",  "accountNo": "10100000560018", "customerNumber": ""}'
+
+
+
+Accounts:
+
+10100000560018
+10100597300018
+
+
+
+
+curl -X POST http://10.99.100.221:3800/xapi/v1.1/accountLookUp -H "Content-Type: application/json" -d '{  "referenceId": "231231321321",  "accessCode": "UngukaBank",  "narration": "Testing Act Lookup",  "accountNo": "10100597300018", "customerNumber": ""}' 
+
+curl -X POST http://192.168.0.117:8080/api/v1/epayment/registration/register -H "Content-Type: application/json" -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVTkdVS0FCIxiwicm9sZXMiOlsiUlJBX0VQQVlfQVBJX1VTRVIiXSwiaXNzIjoiaHR0cDovLzE5Mi4xNjguMC4xMTc6ODU3MC9hcGkvdjEvZXBheW1lbnQvYXV0aC90b2tlbi9yZWZyZXNoIiwiZXBheW1lbnRfYmFua19pZCI6MjA0LCJlcGF5bWVudF91c2VyX2lkIjo5OCwiZXhwIjoxNzA4MTY4ODUyfQ.gRBMrfBeftqfS-i3tf5J9_jAT6RWdihfk67qIvXBkr4" -d '{"RequestId": "105","Tin": "103134658","Names": "SHYIRAMBERE SILAS","Account": "5542-AB-212445BE","Currency": 1,"Phone": "0788826551","Nid": "1197180030315052"}'    
+ 
+      
+curl -X POST http://10.99.100.38:3800/xapi/v1.1/balanceInquiry -H "Content-Type: application/json" -d '{"referenceId": "231231321321", "accessCode": "UngukaBank", "narration": "Testing BAL ENQUIRY",  "accountNo": "10100781350019"}'
+
+curl -X POST http://10.99.100.221:3800/xapi/v1.1/accountTransfer -H "Content-Type: application/json" -d '{"referenceId": "231231321321W","accessCode": "UngukaBank","narration": "Testing TRANSFER","txnAmount": 10,"currency": "RWF","originator": "NJINU","accountNo": "10100781350019","contraAcctNo": "10100000560018"}'
+
+curl -X POST http://10.99.100.221:3800/xapi/v1.1/gLToDpTransfer -H "Content-Type: application/json" -d '{ "referenceId": "231231321321E","accessCode": " UngukaBank ","narration": "Testing GL TO DP","txnAmount": 10,"currency": "RWF","originator": "NJINU","accountNo": "10100597300018","contraAcctNo": "80-0-100-00-2-2201-2201000"}' 
+
+curl -X POST -H "Content-Type: application/json" -d '{"referenceId": "231231321321","accessCode": "UngukaBank","narration": "Testing BAL ENQUIRY","searchType": "MINI","accountNo": "10100597300018"}' http://10.99.100.221:3800/xapi/v1.1/statementInquiry
+
+curl -X POST http://10.99.100.38:3800/xapi/v1.1/gLToDpTransfer -H "Content-Type: application/json" -d '{"referenceId": "231231321321E","accessCode": " UngukaBank ","narration": "Testing GL TO DP","txnAmount": 10,"currency": "RWF","originator": "NJINU","accountNo": "10100874180018","contraAcctNo": "80-0-100-00-2-2201-2201000"}'
+
+curl -X POST -H "Content-Type: application/json" -d '{"referenceId": "231231321321W","accessCode": " UngukaBank","narration": "Testing TRANSFER","txnAmount": 10,"currency": "RWF","originator": "NJINU","accountNo": "10100597300018","contraAcctNo": "10100000560018"}' http://10.99.100.38:3800/xapi/v1.1/accountTransfer
+
+
+curl -X POST -H "Content-Type: application/json" -d '{"referenceId": "231231321321","accessCode": "UngukaBank","narration": "Testing BAL ENQUIRY","accountNo": "10100874180018"}' http://10.99.100.221:3800/xapi/v1.1/balanceInquiry
+
+
+      http://10.99.100.38:3800/xapi/v1.1/accountTransfer 
+      {
+            " referenceId": "231231321321W",
+            "accessCode": " UngukaBank",
+            "narration": "Testing TRANSFER",
+            "txnAmount": 10,
+            "currency": "RWF",  
+            "originator": "NJINU",
+            "accountNo": "10100000560018",
+            "contraAcctNo": "10100000150017 "
+}
+
+
+ ping 10.99.100.221
+PING 10.99.100.221 (10.99.100.221) 56(84) bytes of data.
+64 bytes from 10.99.100.221: icmp_seq=1 ttl=128 time=1.82 ms
+64 bytes from 10.99.100.221: icmp_seq=2 ttl=128 time=0.995 ms
+64 bytes from 10.99.100.221: icmp_seq=3 ttl=128 time=0.860 ms
+
+
+mple request
+http://10.99.100.38:3800/xapi/v1.1//searchTransaction 
+{ 
+      " referenceId": "231231321321H",
+      "accessCode": "UngukaBank",
+      "narration": "Testing GL TO DP", 
+      "txnReference": "231231321321F"
+      }

@@ -1,0 +1,222 @@
+.container-rg {
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 6px;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-rg header {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 16px; /* Adjusted margin */
+}
+
+.container-rg header::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 27px;
+  border-radius: 8px;
+  background-color: #1294d3;
+  margin-bottom: 16px; /* Adjusted margin */
+}
+
+.container-rg form {
+  margin-top: 16px;
+  background-color: #fff;
+}
+
+.form.first {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form.first-py {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.container-rg form .form {
+  background-color: #fff;
+  transition: 0.3s ease;
+}
+
+.container-rg form .form.second {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100%);
+}
+
+form.secActive .form.second {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+form.secActive .form.first {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-100%);
+}
+
+.container-rg form .title {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.container-rg form .fields {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.container-rg form .fields-py {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 50vw;
+}
+
+form .fields .input-field {
+  display: flex;
+  width: 45%;
+  flex-direction: column;
+  margin: 4px 0;
+}
+form .fields-py .input-field {
+  display: flex;
+  width: 56%;
+  flex-direction: column;
+  margin: 4px 1em;
+}
+.input-field label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #2e2e2e;
+}
+
+.input-field input,
+select {
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 0 15px;
+  height: 42px;
+  margin: 8px 0;
+}
+
+.input-field input:focus,
+.input-field select:focus {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.input-field select,
+.input-field input[type="date"] {
+  color: #707070;
+}
+
+.input-field input[type="date"]:valid {
+  color: #333;
+}
+
+.container-rg form button.nextBtn,
+.backBtn,
+.inquireBtn,
+.cancelBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  max-width: 200px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 5px;
+  margin: 25px 0;
+  background-color: #1294d3;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.inquireBtn {
+  margin: 1em !important;
+}
+.cancelBtn {
+  background-color: #f44040;
+}
+.py-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+.container-rg form .addBtn {
+  color: #1294d3;
+  margin: 25px 0;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.container-rg form .addBtn:hover {
+  color: #000;
+}
+
+.container-rg form .btnText {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+form button.nextBtn:hover,
+.inquireBtn:hover {
+  background-color: #265df2;
+}
+
+form button i,
+form .backBtn i {
+  margin: 0 6px;
+}
+
+form .backBtn i {
+  transform: rotate(180deg);
+}
+
+form .buttons {
+  display: flex;
+  align-items: center;
+}
+
+form .buttons button,
+.backBtn {
+  margin-right: 14px;
+}
+
+@media (max-width: 750px) {
+  .container-rg form {
+    overflow-y: scroll;
+  }
+  .container-rg form::-webkit-scrollbar {
+    display: none;
+  }
+  form .fields .input-field {
+    width: calc(100% / 2 - 15px);
+  }
+}
+
+@media (max-width: 550px) {
+  form .fields .input-field {
+    width: 100%;
+  }
+}
