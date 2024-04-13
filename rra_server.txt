@@ -1,4 +1,4 @@
-curl -X GET http://192.168.0.117:8080/api/v1/epayment/auth/token/refresh -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVTkdVS0FCIiwiaXNzIjoiaHR0cDovLzE5Mi4xNjguMC4xMTc6ODU3MC9hcGkvdjEvZXBheW1lbnQvYXV0aC9sb2dpbiIsImV4cCI6MTcxMTg3NjAxNX0.BTGaXqULRxwZu0Mp_WJlz5oanrjontgquKIhxxLftuU" -H "accept: application/json"
+curl -X GET http://192.168.0.117:8080/api/v1/epayment/auth/token/refresh -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVTkdVS0FCIiwiaXNzIjoiaHR0cDovLzE5Mi4xNjguMC4xMTc6ODU3MC9hcGkvdjEvZXBheW1lbnQvYXV0aC9sb2dpbiIsImV4cCI6MTcxNTUwNjE3MH0.sbtqkV17KgrdiYx6t8I5oRhqrF8Q8Pq7swrz9EsyItw" -H "accept: application/json"
 
 
 curl -X POST -H "Content-Type: application/json" -H "Accept: application/json" -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVTkdVS0FCIiwicm9sZXMiOlsiUlJBX0VQQVlfQVBJX1VTRVIiXSwiaXNzIjoiaHR0cDovLzE5Mi4xNjguMC4xMTc6ODU3MC9hcGkvdjEvZXBheW1lbnQvYXV0aC90b2tlbi9yZWZyZXNoIiwiZXBheW1lbnRfYmFua19pZCI6MjA0LCJlcGF5bWVudF91c2VyX2lkIjo5OCwiZXhwIjoxNzEwMzM3MjMzfQ.iOvjUi2WoReb_Klsj_wunNFh6Qt1YdF4jsOTDMPLtoA" -d  '[{"RequestId": "105","Tin": "103134658","Names": "SHYIRAMBERE SILAS","Account": "5542-AB-212445BE","Currency": "1","Phone": "0788826551","Nid": "1197180030315052"}]' http://192.168.0.117:8080/api/v1/epayment/registration/register
@@ -15,13 +15,12 @@ curl -X GET http://192.168.0.117:8080/api/v1/epayment/cashier/payment/getDoc?Doc
 
 curl -X POST -H "Content-Type: application/json" -H "Accept: application/json" -H "username: UNGUKAB" -H "password: Unguka@test1" http://192.168.0.117:8080/api/v1/epayment/auth/login
 
-{"MessageCode":1,"MessageDescription":"SUCCESS","ResponseObject":
+{"MessageCode":1,
+"MessageDescription":"SUCCESS",
+"ResponseObject":{
 
-{
- "AccessToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVTkdVS0FCIiwicm9sZXMiOlsiUlJBX0VQQVlfQVBJX1VTRVIiXSwiaXNzIjoiaHR0cDovLzE5Mi4xNjguMC4xMTc6ODU3MC9hcGkvdjEvZXBheW1lbnQvYXV0aC90b2tlbi9yZWZyZXNoIiwiZXBheW1lbnRfYmFua19pZCI6MjA0LCJlcGF5bWVudF91c2VyX2lkIjo5OCwiZXhwIjoxNzEwMzM3MjMzfQ.iOvjUi2WoReb_Klsj_wunNFh6Qt1YdF4jsOTDMPLtoA",
- 
- 
- "RefreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVTkdVS0FCIiwiaXNzIjoiaHR0cDovLzE5Mi4xNjguMC4xMTc6ODU3MC9hcGkvdjEvZXBheW1lbnQvYXV0aC9sb2dpbiIsImV4cCI6MTcxMTg3NjAxNX0.BTGaXqULRxwZu0Mp_WJlz5oanrjontgquKIhxxLftuU"
+"AccessToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVTkdVS0FCIiwicm9sZXMiOlsiUlJBX0VQQVlfQVBJX1VTRVIiXSwiaXNzIjoiaHR0cDovLzE5Mi4xNjguMC4xMTc6ODU3MC9hcGkvdjEvZXBheW1lbnQvYXV0aC9sb2dpbiIsImVwYXltZW50X2JhbmtfaWQiOjIwNCwiZXBheW1lbnRfdXNlcl9pZCI6OTgsImV4cCI6MTcxMzAwMDU3MH0.95nwjrKKBjtMiczR0FiZiqq5lNo18KCJ148dasrG5Tc",
 
+"RefreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVTkdVS0FCIiwiaXNzIjoiaHR0cDovLzE5Mi4xNjguMC4xMTc6ODU3MC9hcGkvdjEvZXBheW1lbnQvYXV0aC9sb2dpbiIsImV4cCI6MTcxNTUwNjE3MH0.sbtqkV17KgrdiYx6t8I5oRhqrF8Q8Pq7swrz9EsyItw"
 
 }}

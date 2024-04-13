@@ -7,6 +7,7 @@ header("Content-Type: text/plain; charset=UTF-8");
 
 include("../helpers/functions.php");
 include("../config/config.php");
+include("../config/sess.php");
 
 
 $requestData = [];
@@ -97,11 +98,14 @@ function registerAccountsToRRA($requestData, $accessToken)
             print_r(pushToDatabase($requestData));
         } else {
 
-            echo json_encode($response);
+            echo json_encode($_SESSION);
+            // echo json_encode($response);
+      
         }
     } else {
-
-        echo json_encode($response);
+        
+        echo json_encode($_SESSION);
+        // echo json_encode($response);
     }
 }
 

@@ -54,7 +54,7 @@
                         <nav class="sidebar__nav" style="margin-top: 5em;">
                             <ul class="sidebar__menu">
                                 <li class="sidebar__menu-item">
-                                    <a class="sidebar__link" href="./?content=dashboard" aria-expanded="false">
+                                    <a class="sidebar__link" href="?content=dashboard" aria-expanded="false">
                                         <span class="sidebar__link-icon">
                                             <svg class="icon-icon-dashboard">
                                                 <use xlink:href="../img/icons/icon-dashboard.svg#icon-dashboard"></use>
@@ -76,7 +76,7 @@
                                     <div class="collapse hide" id="Payers">
                                         <ul class="sidebar__collapse-menu">
                                             <li class="sidebar__menu-item">
-                                                <a class="sidebar__link" href="./?content=register" aria-expanded="true">
+                                                <a class="sidebar__link" href="?content=register" aria-expanded="true">
                                                     <span class="sidebar__link-icon">
                                                         <i class="uil uil-plus-circle"></i>
                                                     </span>
@@ -84,7 +84,7 @@
                                                 </a>
                                             </li>
                                             <li class="sidebar__menu-item">
-                                                <a class="sidebar__link" href="./?content=deregister" aria-expanded="true">
+                                                <a class="sidebar__link" href="?content=deregister" aria-expanded="true">
                                                     <span class="sidebar__link-icon">
                                                         <svg class="icon-icon-trash">
                                                             <use xlink:href="../img/icons/icon-trash.svg#icon-trash"></use>
@@ -110,7 +110,7 @@
                                     <div class="collapse hide" id="Transactions">
                                         <ul class="sidebar__collapse-menu">
                                             <li class="sidebar__menu-item">
-                                                <a class="sidebar__link" href="./?content=register" aria-expanded="true">
+                                                <a class="sidebar__link" href="?content=register" aria-expanded="true">
                                                     <span class="sidebar__link-icon">
                                                         <i class="uil uil-eye"></i>
                                                     </span>
@@ -118,7 +118,7 @@
                                                 </a>
                                             </li>
                                             <li class="sidebar__menu-item">
-                                                <a class="sidebar__link" href="./?content=newPayment" aria-expanded="true">
+                                                <a class="sidebar__link" href="?content=newPayment" aria-expanded="true">
                                                     <span class="sidebar__link-icon">
                                                         <i class="uil uil-plus-circle"></i>
                                                     </span>
@@ -131,7 +131,7 @@
                                 </li>
 
 
-                                <li class="sidebar__menu-item"><a class="sidebar__link" href="controllers/logout.php" aria-expanded="false"><span class="sidebar__link-icon">
+                                <li class="sidebar__menu-item"><a class="sidebar__link" href="../controllers/logout.php" aria-expanded="false"><span class="sidebar__link-icon">
                                             <i class="uil uil-sign-out-alt"></i></span><span class="sidebar__link-text">Logout</span></a>
                                 </li>
                             </ul>
@@ -177,7 +177,7 @@
                                             <div class="toolbox__status input-group input-group--white input-group--append">
                                                 <input class="input input--select" type="text" value="Originator" data-toggle="dropdown" readonly><span class="input-group__arrow">
                                                     <svg class="icon-icon-keyboard-down">
-                                                        <use xlink:href="img/icons/icon-keyboard-down.svg#icon-keyboard-down"></use>
+                                                        <use xlink:href="../img/icons/icon-keyboard-down.svg#icon-keyboard-down"></use>
                                                     </svg></span>
                                                 <div class="dropdown-menu dropdown-menu--right dropdown-menu--fluid js-dropdown-select"><a class="dropdown-menu__item active" href="#" tabindex="0" data-value="Originator"><span class="marker-item"></span> Originator</a>
                                                     <a class="dropdown-menu__item" href="#" tabindex="0" data-value="RRA"><span class="marker-item color-green"></span> RRA</a><a class="dropdown-menu__item" href="#" tabindex="0" data-value="Unguka"><span class="marker-item color-blue"></span> Unguka</a>
@@ -268,7 +268,7 @@
                                                     <div class="items-more">
                                                         <button class="items-more__button">
                                                             <svg class="icon-icon-more">
-                                                                <use xlink:href="img/icons/icon-more.svg#icon-more"></use>
+                                                                <use xlink:href="../img/icons/icon-more.svg#icon-more"></use>
                                                             </svg>
                                                         </button>
 
@@ -276,15 +276,15 @@
                                                         <div class="dropdown-items dropdown-items--right">
                                                             <div class="dropdown-items__container">
                                                                 <ul class="dropdown-items__list">
-                                                                    <li class="dropdown-items__item"><a class="dropdown-items__link detail_button" href="./?content=clientsDetails&requestId=<?= $requestId ?>"><span class="dropdown-items__link-icon">
+                                                                    <li class="dropdown-items__item"><a class="dropdown-items__link detail_button" href="?content=clientsDetails&requestId=<?= $requestId ?>"><span class="dropdown-items__link-icon">
                                                                                 <svg class="icon-icon-view">
-                                                                                    <use xlink:href="img/icons/icon-view.svg#icon-view"></use>
+                                                                                    <use xlink:href="../img/icons/icon-view.svg#icon-view"></use>
                                                                                 </svg></span>Details</a>
                                                                     </li>
 
                                                                     <li class="dropdown-items__item"><a class="dropdown-items__link"><span class="dropdown-items__link-icon">
                                                                                 <svg class="icon-icon-trash">
-                                                                                    <use xlink:href="img/icons/icon-trash.svg#icon-trash"></use>
+                                                                                    <use xlink:href="../img/icons/icon-trash.svg#icon-trash"></use>
                                                                                 </svg></span>Deregister</a>
                                                                     </li>
                                                                 </ul>
@@ -308,15 +308,15 @@
 
                     <?php
                     elseif ($content === 'register') : ?>
-                        <?php include("views/forms/registration_form.php") ?>
+                        <?php include("../views/forms/registration_form.php") ?>
                     <?php elseif ($content === 'deregister') : ?>
-                        <?php include("views/forms/deregistration_form.php") ?>
+                        <?php include("../views/forms/deregistration_form.php") ?>
                     <?php elseif ($content === 'newPayment') : ?>
-                        <?php include("views/forms/payment_form.php"); ?>
+                        <?php include("../views/forms/payment_form.php"); ?>
                     <?php elseif ($content === 'clientsDetails') : ?>
-                        <?php include("views/client_details.php"); ?>
+                        <?php include("../views/client_details.php"); ?>
                     <?php elseif ($content === 'logout') : ?>
-                        <?php include("controllers/logout.php"); ?>
+                        <?php include("../controllers/logout.php"); ?>
                     <?php endif; ?>
 
                 </div>

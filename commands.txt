@@ -6,23 +6,20 @@ scp /c/xampp/htdocs/esicia/unguka_rra/controllers/ur_register.php  root@10.22.99
 scp /c/xampp/htdocs/unguka_rra/views/dashboard.php  root@10.22.99.100:/var/www/html/unguka_rra/views
 ssh root@10.22.99.100
 
-scp -r /Applications/MAMP/htdocs/unguka_rra/views/dashboard.php  root@10.22.99.100:/var/www/html/unguka_rra
+scp -r /Applications/MAMP/htdocs/unguka_rra/views/forms/registration_form.php root@10.22.99.100:/var/www/html/unguka_rra/views/forms
 
-scp -r /Applications/MAMP/htdocs/unguka_rra/helpers/functions.php  root@10.22.99.100:/var/www/html/unguka_rra/helpers
 
-scp -r /Applications/MAMP/htdocs/unguka_rra  root@10.22.99.100:/var/www/html/
-
-scp -r /Applications/MAMP/htdocs/unguka_rra/controllers/docInquiry.php  root@10.22.99.100:/var/www/html/unguka_rra/controllers
-scp -r /Applications/MAMP/htdocs/unguka_rra/controllers/logout.php  root@10.22.99.100:/var/www/html/unguka_rra/controllers
+scp -r /Applications/MAMP/htdocs/unguka_rra/config/sess.php  root@10.22.99.100:/var/www/html/unguka_rra/config
 
 scp -r /Applications/MAMP/htdocs/unguka_rra/js/script.js  root@10.22.99.100:/var/www/html/unguka_rra/js
 
-scp -r /Applications/MAMP/htdocs/unguka_rra  root@10.22.99.100:/var/www/html
 
-scp -r /Applications/MAMP/htdocs/unguka_rra/views/forms/payment_form.php  root@10.22.99.100:/var/www/html/unguka_rra/views
-scp -r /Applications/MAMP/htdocs/unguka_rra/views/forms/payment_form.php  root@10.22.99.100:/var/www/html/unguka_rra/views
+scp -r /Applications/MAMP/htdocs/unguka_rra/controllers/auth.php  root@10.22.99.100:/var/www/html/unguka_rra/controllers
 
-scp -r /Applications/MAMP/htdocs/unguka_rra/img/icons/functions.php  root@10.22.99.100:/var/www/html/unguka_rra/helpers
+
+scp -r /Applications/MAMP/htdocs/unguka_rra/config/sess.php  root@10.22.99.100:/var/www/html/unguka_rra/config
+
+
 
 
 
