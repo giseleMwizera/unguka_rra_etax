@@ -1,8 +1,5 @@
     <?php
 
-    include("../config/config.php");
-    include("../helpers/functions.php");
-
     $content = isset($_GET['content']) ? $_GET['content'] : 'dashboard';
     ?>
     <!DOCTYPE html>
